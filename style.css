@@ -1,0 +1,227 @@
+/*Aspectos generales de la pagina*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color:#fff;
+    color: #101632dd;
+}
+
+body,div,ul,nav,header,footer,a,li,label{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*--------HEADER SECTION------*/
+.header{
+    background-color:  #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name:header;
+}
+
+/*-----BOTON DE NAVEGACION-----*/
+.header__open-nav-button{
+    color: #990000;
+    font-size: 3rem;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+
+}
+
+.header__checkbox{
+    display: none;
+
+}
+/*-----MENU DE DESPLIEGUE-----*/
+.header__nav{
+    display: none;
+    background-color: #f2f2f2;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    z-index: -1;
+}
+
+/*-----LISTA DE NAVEGACION-----*/
+.header__nav-list{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+
+/*-----MENU DE DESPLIEGUE/CHEQUEA-----*/
+.header__checkbox:checked ~ .header__nav{
+    display: flex;
+    
+}
+ /*-----LOGO-----*/   
+.header__logo{
+    
+    max-width: 100% ;
+    width: 150px;
+    margin: 10px 20px;
+}
+
+/*----Sacarle estilos  del punto-----*/
+.header__nav-item{
+    list-style: none;
+
+}
+/*---Sacarle decoracion de subrayado----*/
+.header__nav-item a {
+   color: #990000; 
+   text-decoration: none;
+   
+}
+
+.header__nav-item :is(:hover,:active){
+    text-decoration: underline;
+
+}
+
+/*-----HEADER QUERIES-----*/
+@container header (min-width:1200px){
+    .header__nav{
+        display: block;
+       position: static;
+       height: auto;
+       width: auto;
+       justify-content: space-between ;
+     }
+     .header__nav-list{
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        gap: 20px;
+        margin-right: 40px;
+     }
+
+     .header__open-nav-button{
+        display: none;
+        width: auto;
+     }
+
+}
+/*-----HEADER ENDS-----*/
+
+/*-----HERO-----*/
+section{padding: 2rem 7%;}
+
+.home{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.50)), url(/img/restobar.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+
+.home .content{
+    max-width: 60rem;
+    border-radius: 20px;
+
+}
+
+.home .content h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #ff9999;
+    padding: 10px;
+    
+
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #eee;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+/*------Tarjetas de comidas-------*/
+
+.section{
+    max-width: 1900px;
+    margin: 8rem auto;
+    padding: 1rem;
+}
+
+.column-4{
+    display: grid;
+    grid-template-columns: repeat(6,1fr) ;
+    column-gap: 2rem;
+}
+
+.tarjeta-rest{
+    background-repeat: no-repeat ;
+    height: 450px ;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: end;
+
+}
+.wrap-text_tarjeta-rest{
+    color: #fff;
+    padding: .4rem;
+    border-radius: 5px;
+    background:linear-gradient( to top, rgb(0 0 0 /.6), rgb(0 0 0 /.6)) ;
+
+
+}
+
+.wrap-text_tarjeta-rest p{
+    color: #f2f2f2;
+}
+
+
+/*Media*/
+
+@media(max-width:1520px){
+    .column-4{
+        grid-template-columns: repeat(4,1fr);
+    }
+    }
+
+
+@media(max-width:1200px){
+    .column-4{
+        grid-template-columns: repeat(3,1fr);
+    }
+    }
+
+
+
+@media(max-width:880px){
+    .column-4{
+        grid-template-columns: repeat(2,1fr);
+    }
+    }
+
+    @media(max-width:640px){
+        .column-4{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+     
+
