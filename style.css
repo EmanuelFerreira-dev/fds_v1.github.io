@@ -5,12 +5,14 @@
 body{
     font-family: sans-serif;
     background-color:#fff;
-    color: #101632dd;
+    
 }
 
 body,div,ul,nav,header,footer,a,li,label{
     margin: 0;
     padding: 0;
+ 
+      
 }
 
 
@@ -22,15 +24,108 @@ body,div,ul,nav,header,footer,a,li,label{
     align-items: center;
     container-type: inline-size;
     container-name:header;
+
+  
 }
 
 /*-----BOTON DE NAVEGACION-----*/
 .header__open-nav-button{
     color: #990000;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
     position: absolute;
     right: 10px;
+    z-index: +1;
+
+}
+
+/* Estilo de los botones o enlaces */
+button, #BTNHome {
+  display: inline-block;
+  background-color: #f5b041; /* Color dorado */
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button, #BTNNosotros{
+
+  display: inline-block;
+  background-color: #f5b041; /* Color dorado */
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+
+}
+
+button, #BTNCarta{
+
+  display: inline-block;
+  background-color: #f5b041; /* Color dorado */
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+
+
+}
+
+button, #BTNContacto{
+
+  display: inline-block;
+  background-color: #f5b041; /* Color dorado */
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+
+}
+
+button:hover, #BTNHome:hover {
+  background-color: #e67e22; /* Cambiamos el tono más oscuro en hover */
+}
+
+button:hover, #BTNNosotros:hover{
+
+  background-color: #e67e22;
+
+}
+
+button:hover, #BTNCarta:hover{
+
+  background-color: #e67e22;
+
+}
+
+button:hover, #BTNContacto:hover{
+
+  background-color: #e67e22;
 
 }
 
@@ -38,32 +133,32 @@ body,div,ul,nav,header,footer,a,li,label{
     display: none;
 
 }
+
+.header__checkbox:checked ~ .header__nav{
+  display: flex; 
+  
+}
 /*-----MENU DE DESPLIEGUE-----*/
 .header__nav{
     display: none;
     background-color: #f2f2f2;
     position: absolute;
-    height: 100vh;
+    height: 85vh;
     width: 100vw;
     top: 0;
-    z-index: -1;
 }
 
 /*-----LISTA DE NAVEGACION-----*/
 .header__nav-list{
     display: flex;
     flex-direction: column;
-    height: 40vh;
+    height: 50vh;
     margin: auto;
     justify-content: space-evenly;
     font-size: 25px;
-}
-
-/*-----MENU DE DESPLIEGUE/CHEQUEA-----*/
-.header__checkbox:checked ~ .header__nav{
-    display: flex;
     
 }
+
  /*-----LOGO-----*/   
 .header__logo{
     
@@ -75,6 +170,9 @@ body,div,ul,nav,header,footer,a,li,label{
 /*----Sacarle estilos  del punto-----*/
 .header__nav-item{
     list-style: none;
+    font-family: "Noto Serif KR", serif;
+    font-weight: bold;
+    
 
 }
 /*---Sacarle decoracion de subrayado----*/
@@ -85,7 +183,9 @@ body,div,ul,nav,header,footer,a,li,label{
 }
 
 .header__nav-item :is(:hover,:active){
-    text-decoration: underline;
+ text-decoration: underline;
+    
+     
 
 }
 
@@ -97,6 +197,7 @@ body,div,ul,nav,header,footer,a,li,label{
        height: auto;
        width: auto;
        justify-content: space-between ;
+      
      }
      .header__nav-list{
         flex-direction: row;
@@ -118,20 +219,19 @@ body,div,ul,nav,header,footer,a,li,label{
 section{padding: 2rem 7%;}
 
 .home{
+    
     display: flex;
-    min-height: 100vh;
+    min-height: 120vh;
     align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.50)), url(/img/restobar.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.50)), url(img/restobar.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 90vh;
     justify-content: center;
     align-items: center;
     text-align: center;
     
 }
-
-
 
 .home .content{
     max-width: 60rem;
@@ -140,6 +240,8 @@ section{padding: 2rem 7%;}
 }
 
 .home .content h1{
+  font-family: "Noto Serif KR", serif;
+  font-weight: bold;
     font-size: 6rem;
     text-transform: uppercase;
     color: #ff9999;
@@ -148,34 +250,95 @@ section{padding: 2rem 7%;}
 
 }
 
+
 .home .content p{
     font-size: 2rem;
     font-weight: lighter;
     line-height: 1.8;
     padding: 1rem 0;
     color: #eee;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Dancing Script", cursive;
+    font-size: 50px;
+
 
 }
 
 /*------Tarjetas de comidas-------*/
 
-.section{
+.column-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaciado entre tarjetas */
+}
+
+.tarjeta-rest {
+  width: 30%; 
+  position: relative;
+  overflow: hidden; 
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  display: flex; /* Flexbox para contener el texto */
+  flex-direction: column; /* Apilamos verticalmente */
+  height: 150px; 
+}
+
+.tarjeta-rest:hover {
+  transform: scale(1.05); /* Aumentamos el tamaño de la tarjeta al pasar el cursor */
+  opacity: 0.9; /* Cambia la opacidad */
+}
+
+.wrap-text_tarjeta-rest {
+  position: absolute; /* Nos permite posicionar el texto dentro de la tarjeta */
+  bottom: 10px; 
+  left: 10px;
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px;
+  border-radius: 5px;
+  width: calc(100% - 20px);
+  min-height: 100px; /* Altura mínima para todos los cuadros de texto */
+  max-height: 150px; /* Altura máxima para evitar que se expanda demasiado */
+  overflow: hidden; /* Ocultamos el contenido que excede la altura */
+  display: flex;
+  flex-direction: column; /* Apilamos erticalmente */
+}
+
+.wrap-text_tarjeta-rest h3 {
+  margin: 0; /* Se pone a 0 para poder eliminar el margen y así acercar mas 
+                 la descripción al título  */
+}
+
+.tarjeta-rest {
+  width: 30%; 
+  position: relative;
+  overflow: hidden; 
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  display: flex; /* Flexbox para contener el texto */
+  flex-direction: column; /* Apilamos verticalmente */
+  height: 150px; /* Asegura que la tarjeta también tenga una altura fija */
+}
+
+
+.wrap-section{
     max-width: 1900px;
     margin: 8rem auto;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .column-4{
     display: grid;
     grid-template-columns: repeat(6,1fr) ;
     column-gap: 2rem;
+    row-gap: 1rem;
+    
+   
 }
 
 .tarjeta-rest{
     background-repeat: no-repeat ;
+    min-width: 230px;
     height: 450px ;
-    padding: 1rem;
+    padding: 0rem;
+    font-size: small;
     border-radius: 5px;
     display: flex;
     align-items: end;
@@ -183,19 +346,30 @@ section{padding: 2rem 7%;}
 }
 .wrap-text_tarjeta-rest{
     color: #fff;
-    padding: .4rem;
+    padding: 0.4rem;
     border-radius: 5px;
-    background:linear-gradient( to top, rgb(0 0 0 /.6), rgb(0 0 0 /.6)) ;
+    background:linear-gradient( to top, rgb(0 0 0 /.5), rgb(0 0 0 /.5)) ;
 
 
 }
 
-.wrap-text_tarjeta-rest p{
-    color: #f2f2f2;
+.wrap-text_tarjeta-rest p {
+  margin-top: 5px; /* El epacio pequeño entre el título y la descripción */
+  color: #f2f2f2; /* Color de la descripción */
+  overflow: hidden; /* Asegura que no se desborde el texto */
+  white-space: normal; /* Nos permite que el texto se divida en varias líneas */
+  line-height: 1.2; /* Es el espaciado entre líneas */
 }
 
+h2{
+  font-family: "Noto Serif KR", serif;
+  font-weight: bold;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #660000;
+}
 
-/*Media*/
+/*---Media-----*/
 
 @media(max-width:1520px){
     .column-4{
@@ -223,5 +397,158 @@ section{padding: 2rem 7%;}
             grid-template-columns: repeat(1,1fr);
         }
     }
-     
+    
+/*---- Sección "Nosotros" ----*/
 
+.section-about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150vh;
+  padding: 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/cocina.png);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #f5f5f5; /* Blanco suave */
+}
+
+/* Estilo del título "Nosotros" */
+h4 {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: #f5b041; /* Color dorado suave */
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+/* Párrafo de la sección */
+#p-nosotros {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 900px;
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco translúcido */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  font-family: 'Georgia', serif;
+  text-align: justify;
+}
+
+/* Iframe del mapa */
+iframe {
+  border: none; /* Elimina bordes predeterminados */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+footer{
+  background-color: #fff;
+  color: var(--black-c);
+  
+}
+
+footer ul{
+  padding: 0;
+}
+
+.wrap-footer{
+  display: grid;
+  grid-template-columns: 30% 25% 15% 20%;
+  column-gap: 5%;
+  padding: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  
+}
+
+.text-element-footer li{
+  list-style: none;
+}
+.text-element-footer h5{
+  margin: 1rem 0;
+  list-style: none;
+  
+  
+  
+}
+
+.text-element-footer{
+  line-height: 2;
+  list-style: none;
+}
+
+.text-element-footer li a{
+  color: var(--main-c);
+  list-style: none;
+  text-decoration: none;
+ 
+}
+
+.rds-element-footer ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rds-element-footer img{
+  width: 45px;
+}
+.rds-element-footer li{
+  margin-right: 1rem;
+  list-style: none;
+}
+
+.footer-creds{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  color: #576171;
+  font-size: .9rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  
+}
+
+.legal-creds ul{
+  display: flex;
+  list-style: none;
+ 
+}
+
+.legal-creds ul li{
+  padding-right: 1rem;
+  
+}
+
+.legal-creds ul li a{
+  color: #576171;
+  
+}
+
+@media (max-width:768px){
+  .wrap-footer{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width:480px){
+  .wrap-footer{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media (max-width:320px){
+  .footer-creds{
+    flex-flow: column;
+  }
+}
